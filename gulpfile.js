@@ -1,4 +1,5 @@
 'use strict';
+
 var del             = require('del');
 var gulp            = require('gulp');
 var git             = require('gulp-git');
