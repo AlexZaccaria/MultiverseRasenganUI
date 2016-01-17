@@ -28,33 +28,24 @@ gulp.task('default', ['RunServer'], function()
 gulp.task('SeqUpdSass', function (CB){ gulpSequence('SetUpCSS', 'SetUpHTML', CB); });
 gulp.task('SeqUpdCSS', function (CB){ gulpSequence('ConcatCSS', 'SetUpHTML', CB); });
 
-gulp.task('init', function(){
-  git.init(function (err) {
-    if (err) throw err;
-  });
+gulp.task('init', function()
+{
+    return git.init(function (err) 
+    { if (err) throw err; });
 });
 
 gulp.task('add', ['init'], function(){
-  return gulp.src('./*.js')
+    return gulp.src(['./*.js', './*.json'])
     .pipe(git.add());
 });
 
-gulp.task('addremote', ['init'], function(){
-  git.addRemote('origin', 'https://github.com/AlexZaccaria/MultiverseRasenganUI.git', function (err) {
-    if (err) throw err;
-  });
-});
+gulp.task('commit', ['add'], function()
+{ return git.commit('Gulp AutoCommit'); });
 
-gulp.task('commit', ['init'], function()
-{
-    return gulp.src('./*.js')
-    .pipe(git.commit('Gulp AutoCommit'));
-});
-
-gulp.task('push', ['add'], function(){
-  git.push('origin', 'master', function (err) {
-    if (err) throw err;
-  });
+gulp.task('push', ['commit'], function()
+{ 
+    return git.push('origin', 'master', function (err)
+    { if (err) throw err; });
 });
 
 gulp.task('RunServer', ['SeqSetUp'], function()
