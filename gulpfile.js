@@ -39,8 +39,11 @@ gulp.task('add', ['init'], function(){
     .pipe(git.add());
 });
 
-gulp.task('commit', ['add'], function()
-{ return git.commit('Gulp AutoCommit'); });
+gulp.task('commit', ['init'], function()
+{
+  return gulp.src(['./*.js', './*.json'])
+    .pipe(git.commit('initial commit'));
+});
 
 gulp.task('push', ['commit'], function()
 { 
