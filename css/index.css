@@ -1,0 +1,306 @@
+body
+{ color: white; background-color: black; }
+
+.orbi 
+{ font-family: 'Orbitron', sans-serif; }
+
+.col .input-field
+{ padding: 0px; }
+
+.prefix
+{ top: 10px; }
+
+.opacy
+{ background-color: rgba(0,0,0,0.5); }
+
+.myform
+{
+    font-size: 12px; 
+    height: 100%;
+}
+
+#mynav
+{ background-color: black; }
+
+#mynav, #myarrow
+{
+    height: 35px;
+    line-height: 35px;
+    position: fixed;
+    bottom: 0px;
+}
+
+.mybg
+{
+    height: calc(100% - 40px);
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0px auto;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.row
+{ margin: 0px; }
+
+.logo
+{ 
+    position: relative;
+    top: -35px;
+    width: 100%; 
+    max-width: 560px;
+}
+
+.butts
+{ position: relative; z-index: 1; }
+
+#Loading
+{
+    position: absolute; 
+    left: 0px; 
+    right: 0px; 
+    top: 0px; 
+    bottom: 0px; 
+    z-index: 100; 
+    background-color: black; 
+    padding-top: 15%;
+    text-align: center;
+}
+
+.material-icons 
+{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face 
+{
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src:  url("/fonts/materialicons/MaterialIcons.eot") format("embedded-opentype"),
+        url("/fonts/materialicons/MaterialIcons.woff2") format("woff2"),
+        url("/fonts/materialicons/MaterialIcons.woff") format("woff"),
+        url("/fonts/materialicons/MaterialIcons.ttf") format("truetype"),
+        url("/fonts/materialicons/MaterialIcons.svg") format("svg");
+}
+
+@font-face 
+{
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  src:  url("/fonts/orbitron/Orbitron-700.eot") format("embedded-opentype"),
+        url("/fonts/orbitron/Orbitron-700.woff2") format("woff2"),
+        url("/fonts/orbitron/Orbitron-700.woff") format("woff"),
+        url("/fonts/orbitron/Orbitron-700.ttf") format("truetype"),
+        url("/fonts/orbitron/Orbitron-700.svg") format("svg");
+} 
+
+.butt1hover, .butt1blink, .butt2hover, .butt2blink, .butt3hover, .butt3blink, .butt4hover, .butt4blink, .butt5hover, .butt5blink, .butt6hover, .butt6blink
+{ 
+    position: absolute; 
+    top: 0px; 
+ 
+    z-index: 1;
+    opacity: 0;
+    
+    -webkit-animation: MyBlink 1s infinite linear;
+    -moz-animation: MyBlink 1s infinite linear;
+    -o-animation: MyBlink 1s infinite linear;
+    animation: MyBlink 1s infinite linear;
+}
+
+.radarframe
+{ background-image: url(../images/bussola.png); }
+
+.radarcont
+{ position: relative; }
+
+.radarbg
+{ 
+    color: black; 
+    font-size: 16px;
+    padding-top: 46%; 
+    padding-right: 5%;
+}
+
+.radarframe, .radarbg
+{
+    position: absolute; 
+    z-index: 1;
+    top: 0px; 
+}
+
+.resradar, .fixedresradar
+{
+    height: 260px; 
+    width: 260px;
+}
+
+@media only screen and (max-width: 1150px)
+{
+    .resradar
+    {
+        height: 240px; 
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 1075px)
+{
+    .resradar
+    {
+        height: 220px; 
+        width: 220px;
+    }
+}
+
+@media only screen and (max-width: 760px)
+{
+    .resradar
+    {
+        height: 200px; 
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    .resradar
+    {
+        height: 180px; 
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 630px)
+{
+    .resradar
+    {
+        height: 170px; 
+        width: 170px;
+    }
+}
+
+.textdivcont
+{ height: calc(100% - 100px); position: relative; top: -45px; padding-top: 30px; overflow: hidden; }
+
+.buttcont, .radarcont
+{ margin: 0 auto; }
+
+.myres
+{ height: 80px; width: 80px; }
+
+@media only screen and (max-width: 810px)
+{
+    .myres
+    { height: 70px; width: 70px; }
+
+    .textdivcont
+    { height: calc(100% - 75px); position: relative; top: -40px; }
+}
+
+@media only screen and (max-width: 710px)
+{
+    .myres
+    { height: 60px; width: 60px; }
+
+    .textdivcont
+    { height: calc(100% - 55px); position: relative; top: -35px; }
+}
+
+@media only screen and (max-width: 610px)
+{
+    .myres
+    { height: 50px; width: 50px; }
+
+    .textdivcont
+    { height: calc(100% - 45px); position: relative; top: -30px; }
+}
+
+.circle1
+{
+    background-color: rgba(0,0,0,0);
+    border:5px solid rgba(0,183,229,0.9);
+    opacity:.9;
+    border-right:5px solid rgba(0,0,0,0);
+    border-left:5px solid rgba(0,0,0,0);
+    border-radius:50px;
+    box-shadow: 0 0 35px #2187e7;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    -webkit-animation: spinPulse 1s infinite linear;
+    -moz-animation: spinPulse 1s infinite linear;
+    -o-animation: spinPulse 1s infinite linear;
+    animation: spinPulse 1s infinite linear;
+}
+
+.circle2
+{
+    background-color: rgba(0,0,0,0);
+    border:5px solid rgba(0,183,229,0.9);
+    opacity:.9;
+    border-left:5px solid rgba(0,0,0,0);
+    border-right:5px solid rgba(0,0,0,0);
+    border-radius:50px;
+    box-shadow: 0 0 15px #2187e7; 
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    position:relative;
+    top:-40px;
+    -webkit-animation: spinoffPulse 1s infinite linear;
+    -moz-animation: spinoffPulse 1s infinite linear;
+    -o-animation: spinoffPulse 1s infinite linear;
+    animation: spinoffPulse 1s infinite linear;
+}
+
+@keyframes spinPulse
+{
+    0% { -moz-transform:rotate(160deg); -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+    50% { -moz-transform:rotate(145deg); -webkit-transform:rotate(145deg); opacity:1; }
+    100% { -moz-transform:rotate(-320deg); -webkit-transform:rotate(-320deg); opacity:0; }
+}
+
+@keyframes spinoffPulse
+{
+    0% { -moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); }
+}
+
+.myLoading 
+{
+    -webkit-animation: Pulsating 1s infinite linear;
+    -moz-animation: Pulsating 1s infinite linear;
+    -o-animation: Pulsating 1s infinite linear;
+    animation: Pulsating 1s infinite linear;
+}
+
+@keyframes Pulsating
+{
+    0% { opacity:0; box-shadow:0 0 1px #2187e7;}
+    50% { opacity:1; }
+    100% { opacity:0; }
+} 
+
+
+@keyframes MyBlink
+{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
+} 

@@ -34,14 +34,15 @@ gulp.task('init', function()
     { if (err) throw err; });
 });
 
-gulp.task('add', ['init'], function(){
-    return gulp.src(['./*.js', './*.json'])
+gulp.task('add', ['init'], function()
+{
+    return gulp.src(['./*.js', './*.json', './css', './fonts', './images', './js', './sass', './static', './themes'])
     .pipe(git.add());
 });
 
-gulp.task('commit', ['init'], function()
+gulp.task('commit', ['add'], function()
 {
-  return gulp.src(['./*.js', './*.json'])
+    return gulp.src(['./*.js', './*.json', './css', './fonts', './images', './js', './sass', './static', './themes'])
     .pipe(git.commit('initial commit'));
 });
 
